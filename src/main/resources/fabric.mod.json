@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "realistic-combat",
+  "id": "realistic_combat",
   "version": "${version}",
 
   "name": "Realistic Combat",
@@ -14,7 +14,7 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/realistic-combat/icon.png",
+  "icon": "assets/realistic_combat/icon.png",
 
   "environment": "*",
   "entrypoints": {
@@ -23,7 +23,7 @@
     ]
   },
   "mixins": [
-    "realistic-combat.mixins.json"
+    "realistic_combat.mixins.json"
   ],
 
   "depends": {
