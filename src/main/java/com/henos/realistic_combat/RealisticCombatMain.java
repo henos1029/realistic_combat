@@ -1,5 +1,6 @@
 package com.henos.realistic_combat;
 
+import net.minecraft.item.Item;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.fabricmc.loader.api.FabricLoader;
