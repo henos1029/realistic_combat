@@ -17,6 +17,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+import java.util.Objects;
 import java.util.UUID;
 
 @Mixin(Item.class)
@@ -26,10 +27,12 @@ public class ItemAttackModifierMixin {
         Item item = ((Item) (Object) this);
 //        RealisticCombatMain.LOGGER.info("getAttributeModifiers() called");
         if (Weights.check_id(item)) {
-            UUID ATTACK_DAMAGE_MODIFIER_ID = MathHelper.randomUuid(Random.createLocal());
-            ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
-            RealisticCombatMain.LOGGER.info("Edited Attack Damage for " + Registry.ITEM.getId(item) + " " + Weights.getWeight(item));
-            cir.setReturnValue(builder.put(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(ATTACK_DAMAGE_MODIFIER_ID, "Base Attack Damage Modifier", Weights.getWeight(item), EntityAttributeModifier.Operation.ADDITION)).build());
+            if (slot.getType() == EquipmentSlot.Type.HAND) {
+                UUID ATTACK_DAMAGE_MODIFIER_ID = MathHelper.randomUuid(Random.createLocal());
+                ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
+                RealisticCombatMain.LOGGER.info("Edited Attack Damage for " + Registry.ITEM.getId(item) + " " + Weights.getWeight(item));
+                cir.setReturnValue(builder.put(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(ATTACK_DAMAGE_MODIFIER_ID, "Base Attack Damage Modifier", Weights.getWeight(item), EntityAttributeModifier.Operation.ADDITION)).build());
+            }
         }
     }
 }
