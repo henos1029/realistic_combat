@@ -23,14 +23,14 @@ public class RealisticCombatMain implements ModInitializer {
 	public static Gson json = new GsonBuilder().setPrettyPrinting().create();
 
 	public static JsonObject weights_json = new JsonObject();
-	public static ImmutableMultimap<String, Float> weightmap;
+//	public static ImmutableMultimap<String, Double> weightmap;
 
 	@Override
 	public void onInitialize() {
 		LOGGER.info(MODID + " initializing");
 		Weights.create_weights_config();
-		LOGGER.info("Creating Weight Config");
-		weightmap = Weights.load_weights_config();
+//		weightmap = Weights.load_weights_config();
+		Weights.load_weights_config();
 		LOGGER.info("Loading Weight Config");
 	}
 }

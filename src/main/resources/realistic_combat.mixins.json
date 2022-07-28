@@ -6,7 +6,7 @@
   "mixins": [
   ],
   "client": [
-    "ImmutableMultimapMixin"
+    "ItemAttackModifierMixin"
   ],
   "injectors": {
     "defaultRequire": 1

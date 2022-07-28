@@ -9,3 +9,4 @@ A Minecraft mod that aims to make combat more realistic
   -> Hitting a player with a bucket will do more damage than hitting them with wool
 * Throwing items can hurt  
   -> shift to pickup? item physics?
+* Lower health gives debuffs
