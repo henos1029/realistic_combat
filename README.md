@@ -1,9 +1,12 @@
-# Fabric Example Mod
+# Realistic Combat
 
-## Setup
+A Minecraft mod that aims to make combat more realistic
+### Todo
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
-
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+* Make hitting different areas of the player hurt more  
+  -> Normal weapon base damage + multiplier
+* Weight based hitting system  
+  -> Hitting a player with a bucket will do more damage than hitting them with wool
+* Throwing items can hurt  
+  -> shift to pickup? item physics?
+* Lower health gives debuffs
