@@ -44,7 +44,7 @@ public class Weights {
     public static void load_weights_config() {
         try {
             RealisticCombatMain.weights_json = json.fromJson(Files.newBufferedReader(WEIGHTS), JsonObject.class);
-//            RealisticCombatMain.LOGGER.info("Loading the weight config into JsonObject");
+            RealisticCombatMain.LOGGER.info("Loading the weight config");
         } catch (IOException e) {
             RealisticCombatMain.LOGGER.error("Couldn't read the weights");
         }
@@ -66,13 +66,17 @@ public class Weights {
 //    }
 
     public static Double getWeight(Item item) {
-//        RealisticCombatMain.LOGGER.info("Retrieved the weight of " + Registry.ITEM.getId(item));
+        if (RealisticCombatMain.isDev()) {
+            RealisticCombatMain.LOGGER.info("Retrieved the weight of " + Registry.ITEM.getId(item));
+        }
         return RealisticCombatMain.weights_json.get(Registry.ITEM.getId(item).toString()).getAsDouble();
     }
 
     public static Boolean check_id(Item item) {
-//        RealisticCombatMain.LOGGER.info("Retrieved the id of " + Registry.ITEM.getId(item).toString());
-        RealisticCombatMain.LOGGER.info(String.valueOf(RealisticCombatMain.weights_json.has(Registry.ITEM.getId(item).toString())));
+        if (RealisticCombatMain.isDev()) {
+            RealisticCombatMain.LOGGER.info("Retrieved the id of " + Registry.ITEM.getId(item).toString());
+            RealisticCombatMain.LOGGER.info(String.valueOf(RealisticCombatMain.weights_json.has(Registry.ITEM.getId(item).toString())));
+        }
         return RealisticCombatMain.weights_json.has(Registry.ITEM.getId(item).toString());
     }
 
