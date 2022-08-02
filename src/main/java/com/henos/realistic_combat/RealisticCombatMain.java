@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableMultimap;
 import com.google.gson.*;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.server.MinecraftServer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,5 +33,9 @@ public class RealisticCombatMain implements ModInitializer {
 //		weightmap = Weights.load_weights_config();
 		Weights.load_weights_config();
 		LOGGER.info("Loading Weight Config");
+	}
+
+	public void onTick(MinecraftServer server) {
+
 	}
 }
