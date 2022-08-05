@@ -1,12 +1,26 @@
 # Realistic Combat
 
-A Minecraft mod that aims to make combat more realistic
-### Todo
+A Minecraft mod that aims to make combat more realistic  
+This mod is currently in *ALPHA*! Please report any bugs [here](https://github.com/henos1029/realistic_combat/issues)
 
-* Make hitting different areas of the player hurt more  
-  -> Normal weapon base damage + multiplier
-* Weight based hitting system  
-  -> Hitting a player with a bucket will do more damage than hitting them with wool
-* Throwing items can hurt  
-  -> shift to pickup? item physics?
+Currently supporting Fabric 1.18.2, 1.19 and 1.19.1  
+
+ 
+
+## Features
+
+Damage is tweaked for some items/blocks based on weight.
+
+ 
+
+## Todo
+
+* Make hitting different areas of the player hurt more   
+* Throwing items at entities can hurt 
 * Lower health gives debuffs
+ 
+
+
+Please make sure you download the correct version from the files tab  
+Ports for other versions or Forge are welcome  
+You may freely use this mod in any modpack  
